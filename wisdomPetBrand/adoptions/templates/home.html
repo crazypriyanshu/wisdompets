@@ -1,5 +1,5 @@
-
-
+{% extends "base.html"%}
+{% block content %}
 <div>
     {% for pet in pets %}
     <div class="petname">
@@ -9,12 +9,11 @@
             {% if pet.breed %}
                 <p> Breed: {{pet.breed}}</p>
             {% endif %}
-        <p> Species: {{pet.species}}</p>
+         <p> Species: {{pet.species}}</p>
         <p> Age: {{pet.age}}</p>
         <p> Gender:  {{pet.gender}}</p>
         <p class="hidden"> Description: {{pet.description}}</p>
-
     </div>
     {% endfor %}
-
 </div>
+{% endblock %}
