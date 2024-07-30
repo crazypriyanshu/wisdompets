@@ -1,0 +1,20 @@
+
+
+<div>
+    {% for pet in pets %}
+    <div class="petname">
+        <a href="{% url 'pet_detail' pet.id %}">
+            <h3> {{pet.name | capfirst}} </h3>
+        </a>
+            {% if pet.breed %}
+                <p> Breed: {{pet.breed}}</p>
+            {% endif %}
+        <p> Species: {{pet.species}}</p>
+        <p> Age: {{pet.age}}</p>
+        <p> Gender:  {{pet.gender}}</p>
+        <p class="hidden"> Description: {{pet.description}}</p>
+
+    </div>
+    {% endfor %}
+
+</div>
